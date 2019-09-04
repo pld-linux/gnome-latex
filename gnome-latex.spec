@@ -11,6 +11,7 @@ URL:		https://wiki.gnome.org/Apps/GNOME-LaTeX
 BuildRequires:	appstream-glib-devel
 BuildRequires:	autoconf >= 2.64
 BuildRequires:	automake >= 1:1.14
+BuildRequires:	dconf-devel
 BuildRequires:	gettext-tools
 BuildRequires:	glib2-devel >= 1:2.56
 BuildRequires:	gobject-introspection-devel >= 1.30.0
