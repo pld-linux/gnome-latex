@@ -1,13 +1,14 @@
 Summary:	Integrated LaTeX Environment for the GNOME desktop
 Summary(pl.UTF-8):	Zintegrowane środowisko LaTeXowe dla GNOME
 Name:		gnome-latex
-Version:	3.36.0
+Version:	3.38.0
 Release:	1
 License:	GPL v3+
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-latex/3.36/%{name}-%{version}.tar.xz
-# Source0-md5:	5cce177504646acb2d7480146c06f7dd
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-latex/3.38/%{name}-%{version}.tar.xz
+# Source0-md5:	3725de4cba9a326b56d52f018089e6ea
 URL:		https://wiki.gnome.org/Apps/GNOME-LaTeX
+BuildRequires:	amtk-devel >= 5.2
 BuildRequires:	appstream-glib-devel
 BuildRequires:	autoconf >= 2.64
 BuildRequires:	automake >= 1:1.14
@@ -26,7 +27,7 @@ BuildRequires:	libtool >= 2:2.2
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.581
 BuildRequires:	tar >= 1:1.22
-BuildRequires:	tepl-devel >= 4.4
+BuildRequires:	tepl-devel >= 5.0
 BuildRequires:	vala >= 2:0.46
 BuildRequires:	vala-gspell >= 1.8
 BuildRequires:	vala-gtksourceview4 >= 4.0
@@ -36,6 +37,7 @@ BuildRequires:	yelp-tools
 Requires(post,postun):	desktop-file-utils
 Requires(post,postun):	glib2 >= 1:2.56
 Requires(post,postun):	gtk-update-icon-cache
+Requires:	amtk >= 5.2
 Requires:	glib2 >= 1:2.56
 Requires:	gsettings-desktop-schemas
 Requires:	gspell >= 1.8
@@ -43,7 +45,7 @@ Requires:	gtk+3 >= 3.22
 Requires:	gtksourceview4 >= 4.0
 Requires:	hicolor-icon-theme
 Requires:	libgee >= 0.10
-Requires:	tepl >= 4.4
+Requires:	tepl >= 5.0
 Suggests:	latexmk >= 4.31
 Obsoletes:	latexila < 3.28
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -103,7 +105,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/gnome-latex
 %{_datadir}/metainfo/org.gnome.gnome-latex.appdata.xml
 %{_desktopdir}/org.gnome.gnome-latex.desktop
-%{_iconsdir}/hicolor/*x*/apps/gnome-latex.png
-%{_iconsdir}/hicolor/symbolic/apps/gnome-latex-symbolic.svg
+%{_iconsdir}/hicolor/scalable/apps/org.gnome.gnome-latex.svg
+%{_iconsdir}/hicolor/symbolic/apps/org.gnome.gnome-latex-symbolic.svg
 %{_mandir}/man1/gnome-latex.1*
 %{_gtkdocdir}/gnome-latex
