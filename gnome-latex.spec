@@ -2,7 +2,7 @@ Summary:	Integrated LaTeX Environment for the GNOME desktop
 Summary(pl.UTF-8):	Zintegrowane środowisko LaTeXowe dla GNOME
 Name:		gnome-latex
 Version:	3.38.0
-Release:	2
+Release:	3
 License:	GPL v3+
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/gnome-latex/3.38/%{name}-%{version}.tar.xz
