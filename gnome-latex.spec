@@ -1,19 +1,19 @@
 Summary:	Integrated LaTeX Environment for the GNOME desktop
 Summary(pl.UTF-8):	Zintegrowane środowisko LaTeXowe dla GNOME
 Name:		gnome-latex
-Version:	3.40.0
+Version:	3.42.0
 Release:	1
 License:	GPL v3+
 Group:		X11/Applications
-Source0:	https://download.gnome.org/sources/gnome-latex/3.40/%{name}-%{version}.tar.xz
-# Source0-md5:	43e2b85044bc2976d8825d29be883b66
+Source0:	https://download.gnome.org/sources/gnome-latex/3.42/%{name}-%{version}.tar.xz
+# Source0-md5:	6f52acf980c9a146ec25c67e5df65c83
 URL:		https://wiki.gnome.org/Apps/GNOME-LaTeX
-BuildRequires:	amtk-devel >= 5.2
+BuildRequires:	amtk-devel >= 5.6
 BuildRequires:	appstream-glib-devel
 BuildRequires:	autoconf >= 2.64
 BuildRequires:	automake >= 1:1.14
 BuildRequires:	dconf-devel
-BuildRequires:	gettext-tools
+BuildRequires:	gettext-tools >= 0.19.6
 BuildRequires:	glib2-devel >= 1:2.56
 BuildRequires:	gobject-introspection-devel >= 1.30.0
 BuildRequires:	gsettings-desktop-schemas-devel
@@ -21,13 +21,12 @@ BuildRequires:	gspell-devel >= 1.8
 BuildRequires:	gtk+3-devel >= 3.22
 BuildRequires:	gtk-doc >= 1.14
 BuildRequires:	gtksourceview4-devel >= 4.0
-BuildRequires:	intltool >= 0.50.1
 BuildRequires:	libgee-devel >= 0.10
 BuildRequires:	libtool >= 2:2.2
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.581
 BuildRequires:	tar >= 1:1.22
-BuildRequires:	tepl-devel >= 6.0.1
+BuildRequires:	tepl-devel >= 6.2
 BuildRequires:	vala >= 2:0.46
 BuildRequires:	vala-gspell >= 1.8
 BuildRequires:	vala-gtksourceview4 >= 4.0
@@ -37,7 +36,7 @@ BuildRequires:	yelp-tools
 Requires(post,postun):	desktop-file-utils
 Requires(post,postun):	glib2 >= 1:2.56
 Requires(post,postun):	gtk-update-icon-cache
-Requires:	amtk >= 5.2
+Requires:	amtk >= 5.6
 Requires:	glib2 >= 1:2.56
 Requires:	gsettings-desktop-schemas
 Requires:	gspell >= 1.8
@@ -45,7 +44,7 @@ Requires:	gtk+3 >= 3.22
 Requires:	gtksourceview4 >= 4.0
 Requires:	hicolor-icon-theme
 Requires:	libgee >= 0.10
-Requires:	tepl >= 6.0.1
+Requires:	tepl >= 6.2
 Suggests:	latexmk >= 4.31
 Obsoletes:	latexila < 3.28
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -63,7 +62,6 @@ nazywał się LaTeXila.
 
 %build
 %{__libtoolize}
-%{__intltoolize}
 %{__aclocal} -I m4
 %{__autoconf}
 %{__autoheader}
