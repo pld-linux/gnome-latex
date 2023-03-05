@@ -1,12 +1,12 @@
 Summary:	Integrated LaTeX Environment for the GNOME desktop
 Summary(pl.UTF-8):	Zintegrowane środowisko LaTeXowe dla GNOME
 Name:		gnome-latex
-Version:	3.42.0
+Version:	3.44.0
 Release:	1
 License:	GPL v3+
 Group:		X11/Applications
-Source0:	https://download.gnome.org/sources/gnome-latex/3.42/%{name}-%{version}.tar.xz
-# Source0-md5:	6f52acf980c9a146ec25c67e5df65c83
+Source0:	https://download.gnome.org/sources/gnome-latex/3.44/%{name}-%{version}.tar.xz
+# Source0-md5:	f2e13fa2b5411fa5eea8909d226f4b33
 URL:		https://wiki.gnome.org/Apps/GNOME-LaTeX
 BuildRequires:	amtk-devel >= 5.6
 BuildRequires:	appstream-glib-devel
@@ -26,7 +26,7 @@ BuildRequires:	libtool >= 2:2.2
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.581
 BuildRequires:	tar >= 1:1.22
-BuildRequires:	tepl-devel >= 6.2
+BuildRequires:	tepl-devel >= 6.4
 BuildRequires:	vala >= 2:0.46
 BuildRequires:	vala-gspell >= 1.8
 BuildRequires:	vala-gtksourceview4 >= 4.0
@@ -44,7 +44,7 @@ Requires:	gtk+3 >= 3.22
 Requires:	gtksourceview4 >= 4.0
 Requires:	hicolor-icon-theme
 Requires:	libgee >= 0.10
-Requires:	tepl >= 6.2
+Requires:	tepl >= 6.4
 Suggests:	latexmk >= 4.31
 Obsoletes:	latexila < 3.28
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
