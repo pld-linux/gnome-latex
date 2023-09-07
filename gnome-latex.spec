@@ -1,14 +1,13 @@
 Summary:	Integrated LaTeX Environment for the GNOME desktop
 Summary(pl.UTF-8):	Zintegrowane środowisko LaTeXowe dla GNOME
 Name:		gnome-latex
-Version:	3.44.0
+Version:	3.46.0
 Release:	1
 License:	GPL v3+
 Group:		X11/Applications
-Source0:	https://download.gnome.org/sources/gnome-latex/3.44/%{name}-%{version}.tar.xz
-# Source0-md5:	f2e13fa2b5411fa5eea8909d226f4b33
+Source0:	https://download.gnome.org/sources/gnome-latex/3.46/%{name}-%{version}.tar.xz
+# Source0-md5:	dc3b800973e7527e97a8a21229f848fb
 URL:		https://wiki.gnome.org/Apps/GNOME-LaTeX
-BuildRequires:	amtk-devel >= 5.6
 BuildRequires:	appstream-glib-devel
 BuildRequires:	autoconf >= 2.64
 BuildRequires:	automake >= 1:1.14
@@ -20,13 +19,14 @@ BuildRequires:	gsettings-desktop-schemas-devel
 BuildRequires:	gspell-devel >= 1.8
 BuildRequires:	gtk+3-devel >= 3.22
 BuildRequires:	gtk-doc >= 1.14
-BuildRequires:	gtksourceview4-devel >= 4.0
+BuildRequires:	libgedit-amtk-devel >= 5.8
+BuildRequires:	libgedit-gtksourceview-devel >= 299
 BuildRequires:	libgee-devel >= 0.10
 BuildRequires:	libtool >= 2:2.2
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.581
 BuildRequires:	tar >= 1:1.22
-BuildRequires:	tepl-devel >= 6.4
+BuildRequires:	tepl-devel >= 6.8
 BuildRequires:	vala >= 2:0.46
 BuildRequires:	vala-gspell >= 1.8
 BuildRequires:	vala-gtksourceview4 >= 4.0
@@ -36,15 +36,15 @@ BuildRequires:	yelp-tools
 Requires(post,postun):	desktop-file-utils
 Requires(post,postun):	glib2 >= 1:2.56
 Requires(post,postun):	gtk-update-icon-cache
-Requires:	amtk >= 5.6
 Requires:	glib2 >= 1:2.56
 Requires:	gsettings-desktop-schemas
 Requires:	gspell >= 1.8
 Requires:	gtk+3 >= 3.22
-Requires:	gtksourceview4 >= 4.0
 Requires:	hicolor-icon-theme
+Requires:	libgedit-amtk >= 5.8
+Requires:	libgedit-gtksourceview >= 299
 Requires:	libgee >= 0.10
-Requires:	tepl >= 6.4
+Requires:	tepl >= 6.8
 Suggests:	latexmk >= 4.31
 Obsoletes:	latexila < 3.28
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
