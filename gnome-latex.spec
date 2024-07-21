@@ -2,11 +2,12 @@ Summary:	Integrated LaTeX Environment for the GNOME desktop
 Summary(pl.UTF-8):	Zintegrowane środowisko LaTeXowe dla GNOME
 Name:		gnome-latex
 Version:	3.46.0
-Release:	1
+Release:	2
 License:	GPL v3+
 Group:		X11/Applications
 Source0:	https://download.gnome.org/sources/gnome-latex/3.46/%{name}-%{version}.tar.xz
 # Source0-md5:	dc3b800973e7527e97a8a21229f848fb
+Patch0:		%{name}-tepl.patch
 URL:		https://wiki.gnome.org/Apps/GNOME-LaTeX
 BuildRequires:	appstream-glib-devel
 BuildRequires:	autoconf >= 2.64
@@ -21,12 +22,12 @@ BuildRequires:	gtk+3-devel >= 3.22
 BuildRequires:	gtk-doc >= 1.14
 BuildRequires:	libgedit-amtk-devel >= 5.8
 BuildRequires:	libgedit-gtksourceview-devel >= 299
+BuildRequires:	libgedit-tepl-devel >= 6.10
 BuildRequires:	libgee-devel >= 0.10
 BuildRequires:	libtool >= 2:2.2
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.581
 BuildRequires:	tar >= 1:1.22
-BuildRequires:	tepl-devel >= 6.8
 BuildRequires:	vala >= 2:0.46
 BuildRequires:	vala-gspell >= 1.8
 BuildRequires:	vala-gtksourceview4 >= 4.0
@@ -43,8 +44,8 @@ Requires:	gtk+3 >= 3.22
 Requires:	hicolor-icon-theme
 Requires:	libgedit-amtk >= 5.8
 Requires:	libgedit-gtksourceview >= 299
+Requires:	libgedit-tepl >= 6.10
 Requires:	libgee >= 0.10
-Requires:	tepl >= 6.8
 Suggests:	latexmk >= 4.31
 Obsoletes:	latexila < 3.28
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -59,6 +60,7 @@ nazywał się LaTeXila.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %{__libtoolize}

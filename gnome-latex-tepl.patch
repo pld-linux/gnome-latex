@@ -1,0 +1,11 @@
+--- gnome-latex-3.46.0/configure.ac.orig	2023-07-29 11:55:35.000000000 +0200
++++ gnome-latex-3.46.0/configure.ac	2024-07-21 16:17:43.768405712 +0200
+@@ -47,7 +47,7 @@ PKG_CHECK_MODULES([DEP], [
+ 	gtk+-3.0 >= 3.22
+ 	gspell-1 >= 1.8
+ 	libgedit-amtk-5
+-	tepl-6 >= 6.8
++	libgedit-tepl-6 >= 6.10
+ 	gee-0.8 >= 0.10
+ 	gsettings-desktop-schemas
+ ])
