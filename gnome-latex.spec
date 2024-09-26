@@ -2,7 +2,7 @@ Summary:	Integrated LaTeX Environment for the GNOME desktop
 Summary(pl.UTF-8):	Zintegrowane środowisko LaTeXowe dla GNOME
 Name:		gnome-latex
 Version:	3.46.0
-Release:	2
+Release:	3
 License:	GPL v3+
 Group:		X11/Applications
 Source0:	https://download.gnome.org/sources/gnome-latex/3.46/%{name}-%{version}.tar.xz
@@ -72,6 +72,9 @@ nazywał się LaTeXila.
 	--enable-gtk-doc \
 	--disable-silent-rules \
 	--with-html-dir=%{_gtkdocdir}
+
+# force vala->C rebuild to fix/update types
+%{__make} -C src clean
 
 %{__make}
 
